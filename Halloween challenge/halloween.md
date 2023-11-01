@@ -7,7 +7,7 @@
         - calls: `4923`
         - optimal cost: `(100, -3)`
     - `NUM_POINTS, NUM_SETS, DENSITY = 1000, 1000, 0.3`
-        - my computer takes too much time, higer than 20 minutes
+        - my computer takes too much time, more than 20 minutes
     - `NUM_POINTS, NUM_SETS, DENSITY = 1000, 1000, 0.7`
         - still too much time
     - `NUM_POINTS, NUM_SETS, DENSITY = 5000, 5000, 0.3`
