@@ -1,5 +1,56 @@
 # Evalaution algorithms
-- ## TABU SEARCH
+- ## Tabu search
     - `NUM_POINTS, NUM_SETS, DENSITY = 100, 100, 0.3`
-        - calls: `11432`
+        - calls: `5177`
         - optimal cost: `(100, -7)`
+    - `NUM_POINTS, NUM_SETS, DENSITY = 100, 100, 0.7`
+        - calls: `4923`
+        - optimal cost: `(100, -3)`
+    - `NUM_POINTS, NUM_SETS, DENSITY = 1000, 1000, 0.3`
+        - my computer takes too much time, higer than 20 minutes
+    - `NUM_POINTS, NUM_SETS, DENSITY = 1000, 1000, 0.7`
+        - still too much time
+    - `NUM_POINTS, NUM_SETS, DENSITY = 5000, 5000, 0.3`
+        - still too much time
+    - `NUM_POINTS, NUM_SETS, DENSITY = 5000, 5000, 0.7`
+        - still too much time
+
+- ## Iterated local search
+    - `NUM_POINTS, NUM_SETS, DENSITY = 100, 100, 0.3`
+        - calls: `24`
+        - optimal cost: `(100, -17)`
+    - `NUM_POINTS, NUM_SETS, DENSITY = 100, 100, 0.7`
+        - calls: `35`
+        - optimal cost: `(100, -21)`
+    - `NUM_POINTS, NUM_SETS, DENSITY = 1000, 1000, 0.3`
+        - calls: `50`
+        - optimal cost: `(1000, -462)`
+    - `NUM_POINTS, NUM_SETS, DENSITY = 1000, 1000, 0.7`
+        - calls: `47`
+        - optimal cost: `(1000, -467)`
+    - `NUM_POINTS, NUM_SETS, DENSITY = 5000, 5000, 0.3`
+        - calls: `53`
+        - optimal cost: `(5000, -2430)`
+    - `NUM_POINTS, NUM_SETS, DENSITY = 5000, 5000, 0.7`
+        - calls: `47`
+        - optimal cost: `(5000, -2441)`
+
+- ## Simulated annealing
+    - `NUM_POINTS, NUM_SETS, DENSITY = 100, 100, 0.3`
+        - calls: `453`
+        - optimal cost: `(100, -9)`
+    - `NUM_POINTS, NUM_SETS, DENSITY = 100, 100, 0.7`
+        - calls: `453`
+        - optimal cost: `(100, -3)`
+    - `NUM_POINTS, NUM_SETS, DENSITY = 1000, 1000, 0.3`
+        - calls: `453`
+        - optimal cost: `(1000, -407)`
+    - `NUM_POINTS, NUM_SETS, DENSITY = 1000, 1000, 0.7`
+        - calls: `453`
+        - optimal cost: `(1000, -409)`
+    - `NUM_POINTS, NUM_SETS, DENSITY = 5000, 5000, 0.3`
+        - calls: `453`
+        - optimal cost: `(5000, -2378)`
+    - `NUM_POINTS, NUM_SETS, DENSITY = 5000, 5000, 0.7`
+        - calls: `453`
+        - optimal cost: `(5000, -2381)`
