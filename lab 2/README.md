@@ -9,3 +9,5 @@ percentage of win rate:
 - my_strategy vs optimal: 78% vs 22%
 - my_strategy vs pure_random: 89% vs 11%
 - my_strategy vs gabriele: 99% vs 1%
+
+Reviewed: [Davide Natale](https://github.com/Davide-Natale/Computational-Intelligence/issues/1#issue-2008582642) and [Massimo Porcheddu](https://github.com/TheMassimo/Computational_intelligence/issues/2#issue-2008615948)
