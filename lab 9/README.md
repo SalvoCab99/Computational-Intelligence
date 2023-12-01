@@ -16,4 +16,13 @@ There are 3 crossover functions:
 - `uniform_xover`: it's a standard crossove, each element of the new individual is randomly given by the first parent or the second parent
 
 ### RESULTS
-dire che con solo mutate è migliore quando il problem size è piccolo e aggiungere risultati
+I have noticed that performing much better when it uses only one mutation (the standard), I don't know why but you can see it in the result.
+The result are obtained doing 10 times the same problem with the same type of mutation (the standard or the random choice of the three) you can see it below
+
+|          | Colonna 1 | Colonna 2 | Colonna 3 |
+|----------|-----------|-----------|-----------|
+| Riga 1   | Riga 1, C1 | Riga 1, C2 | Riga 1, C3 |
+| Riga 2   | Riga 2, C1 | Riga 2, C2 | Riga 2, C3 |
+| Riga 3   | Riga 3, C1 | Riga 3, C2 | Riga 3, C3 |
+| Riga 4   | Riga 4, C1 | Riga 4, C2 | Riga 4, C3 |
+| Riga 5   | Riga 5, C1 | Riga 5, C2 | Riga 5, C3 |
