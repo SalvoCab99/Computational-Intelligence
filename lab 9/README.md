@@ -1,4 +1,4 @@
-### Evolutionary algorithm
+# Evolutionary algorithm
 I made a solution with a standard evolutionary algorithm approach.
 The population size is 100, so it will be created 100 individuals and their fitness will be calculated, then it will be popolated thanks to the mutation and crossover functions.
 There is a counter used to count the numer of times that the best fitness function is the same; this provides to stop populating when we suppose to have reached the best fitness of that problem. The number is not randomly selected, because I tested different value and 150 for a NUM_SETS = 1000 is a good compromise
