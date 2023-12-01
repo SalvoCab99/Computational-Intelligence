@@ -18,7 +18,7 @@ There are 3 crossover functions:
 ### RESULTS
 I have noticed that performing much better when it uses only one mutation (the standard), I don't know why but you can see it in the result.
 The result are obtained doing 10 times the same problem with the same type of mutation (the standard or the random choice of the three) you can see it below.
-Each cell contains: **best fitness, fitness call**
+Each cell contains the average of: **best fitness, fitness call**
 |   | Prob. size 1 | Prob. size 2 | Prob. size 5 | Prob. size 10 |
 |----------|-----------|-----------|-----------|-----------|
 | **one mutation**   | 96% , 27 600 | 62% , 34 500 | 46% , 39 000 | 33% , 72 000 |
