@@ -17,12 +17,9 @@ There are 3 crossover functions:
 
 ### RESULTS
 I have noticed that performing much better when it uses only one mutation (the standard), I don't know why but you can see it in the result.
-The result are obtained doing 10 times the same problem with the same type of mutation (the standard or the random choice of the three) you can see it below
+The result are obtained doing 10 times the same problem with the same type of mutation (the standard or the random choice of the three) you can see it below.
 
-|          | Colonna 1 | Colonna 2 | Colonna 3 |
-|----------|-----------|-----------|-----------|
-| Riga 1   | Riga 1, C1 | Riga 1, C2 | Riga 1, C3 |
-| Riga 2   | Riga 2, C1 | Riga 2, C2 | Riga 2, C3 |
-| Riga 3   | Riga 3, C1 | Riga 3, C2 | Riga 3, C3 |
-| Riga 4   | Riga 4, C1 | Riga 4, C2 | Riga 4, C3 |
-| Riga 5   | Riga 5, C1 | Riga 5, C2 | Riga 5, C3 |
+| best fitness, fitness call | Prob. size 1 | Prob. size 2 | Prob. size 5 | Prob. size 10 |
+|----------|-----------|-----------|-----------|-----------|
+| **one mutation**   | 96% , 27 600 | 62% , 34 500 | 46% , 39 000 | 33% , 72 000 |
+| **three mutation**   | 75% , 10 000 | 55% , 14 500 | 41% , 39 000 | 31% , 76 000 |
