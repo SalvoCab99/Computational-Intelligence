@@ -23,3 +23,5 @@ Each cell contains the average of: **best fitness, fitness call**
 |----------|-----------|-----------|-----------|-----------|
 | **one mutation**   | 96% , 27 600 | 62% , 34 500 | 46% , 39 000 | 33% , 72 000 |
 | **three mutation**   | 75% , 10 000 | 55% , 14 500 | 41% , 39 000 | 31% , 76 000 |
+
+Reviewed: [Luca Solaini](https://github.com/lucasolaini/computational-intelligence/issues/5#issue-2033900760) and [Giuseppe Roberto Allegra](https://github.com/AllegraRoberto/Computational-Intelligence/issues/3#issue-2033908849)
