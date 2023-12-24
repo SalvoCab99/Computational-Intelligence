@@ -9,13 +9,13 @@ when we train the player as "X" it is able only for playing with that. Same thin
 The results that I show are given by 10_000 games:
 
 - my player = "X":
-Results for 10_000 games:
-Win rate of our player(9149): 91.49%
-Win rate of random player(618): 6.18%
-Draw rate(233): 2.33%
+- Results for 10_000 games:
+    - Win rate of our player(9149): 91.49%
+    - Win rate of random player(618): 6.18%
+    - Draw rate(233): 2.33%
 
 - my player = "O":
-Results for 10_000 games:
-Win rate of our player(7807): 78.07%
-Win rate of random player(1849): 18.49%
-Draw rate(344): 3.44%
+- Results for 10_000 games:
+    - Win rate of our player(7807): 78.07%
+    - Win rate of random player(1849): 18.49%
+    - Draw rate(344): 3.44%
