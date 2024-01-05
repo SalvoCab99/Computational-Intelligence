@@ -19,3 +19,5 @@ The results that I show are given by 10_000 games:
     - Win rate of our player(7807): 78.07%
     - Win rate of random player(1849): 18.49%
     - Draw rate(344): 3.44%
+
+Reviewed: [Luca Pastore](https://github.com/s288976/computational_intelligence_23_24/issues/2#issue-2067837272) and [Marcello Vitaggio](https://github.com/Kalller/computational-intelligence/issues/6#issue-2067758806)
