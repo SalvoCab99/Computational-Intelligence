@@ -128,8 +128,10 @@ def stats(num_episodes, play):
             p1win += 1
         else:
             p2win +=1
-    print("player 1 won", p1win)
-    print("player 2 won", p2win)
+    p1p = p1win/num_episodes
+    p2p = p2win/num_episodes
+    print(f"player 1 won {p1win} times  percentage :{p1p:.2%}")
+    print(f"player 2 won {p2win} times  percentage :{p2p:.2%}")
     print("draws", num_episodes - (p1win+p2win))
 
 #menu
@@ -161,7 +163,7 @@ if __name__ == '__main__':
         match option:
             case "1":   #Match against Trained player
                 print("You will play against Trained Player")
-                print("1. Play against Q_Learning Player")
+                print("1. Play against Q-Learning Player")
                 print("2. Play against MinMax Player (maybe unbeatable)")
                 p = input("Select the opponent: ")
                 while p != "1" and p != "2":
@@ -218,10 +220,10 @@ if __name__ == '__main__':
                         print("YOU LOST :(")
             case "3":
                 print("What do you want to see?")
-                print("1. Q_Learning Player vs MinMax Player")
-                print("2. MinMax Player vs Q_Learning Player")
-                print("3. Q_Learning Player vs Random Player")
-                print("4. Random Player vs Q_Learning Player")
+                print("1. Q-Learning Player vs MinMax Player")
+                print("2. MinMax Player vs Q-Learning Player")
+                print("3. Q-Learning Player vs Random Player")
+                print("4. Random Player vs Q-Learning Player")
                 print("5. MinMax Player vs Random Player")
                 print("6. Random Player vs MinMax Player")
                 while True:
@@ -266,9 +268,9 @@ if __name__ == '__main__':
                 while p != "u" and p != "r":
                     p = input("Not valid - u or r: ").lower()
                 if(select == "X"):
-                    train(500, 0, True if p=="u" else False)
+                    train(200, 0, True if p=="u" else False)
                 if(select == "O"):
-                    train(500, 1, True if p=="u" else False)
+                    train(200, 1, True if p=="u" else False)
             case "q":
                 print("Good bye!")
                 break
