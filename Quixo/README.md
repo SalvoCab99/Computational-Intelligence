@@ -10,7 +10,7 @@ In the class `Game` have been done two changes:
 
 *   `bot_match(play)`: Start a match of two Players (qlearnig,minmax,random) that are not humans, the players are selected by the user.
 *   `stats(num_episodes, play)`: Compute matches and show results of two Players (qlearnig,minmax,random), the players are selected by the user.
-*   `__name__ == '__main__'`: In the main section will will be shown a menu when the user can decide what to do(play vs other Players, watch results of different matches, whatch a match and also traning the qlearning player(`train` secret word in the menu, here you can decide if retrain the Player or update the dictionary with some match).
+*   `__name__ == '__main__'`: In the main section will be shown a menu when the user can decide what to do(play vs other Players, watch results of different matches, watch a match and also traning the qlearning player(`train` secret word in the menu, here you can decide if retrain the Player or update the dictionary with some match).
 
 ## Players
 
@@ -21,7 +21,7 @@ A class of players that makes random moves.
 **TrainedPlayer**: A class of players implementing Q-learning. It learns by playing against itself or other players and updates its Q-table accordingly.
 
 *   `find_in_dict`: Finds a state in the dictionary by rotating and mirroring the board state. It return also a number that allows us to know what type of rotation it takes
-*   `make_move`: Chooses the best move based on the current state, considering the trade-off between exploration and exploitation. In this function that is a "cheat", when it checks all possible actions and the next move is a win it will do that move. The reason of taking this decision is to train the player to find quicly the move that allows it to win, but i know that it will require a lot of training that my pc doesn't support :(
+*   `make_move`: Chooses the best move based on the current state, considering the trade-off between exploration and exploitation. In this function that is a "cheat", when it checks all possible actions and if the next move is a win it will do that move. The reason of taking this decision is to train the player to quickly find the move that allows it to win, but I know that it will require a lot of training that my pc doesn't support :(
 *   `update_dict`: Updates the Q-table based on the received reward.
 *   `state_value`: Evaluates the state based on the game board.
 

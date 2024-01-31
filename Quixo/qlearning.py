@@ -5,7 +5,7 @@ from tqdm.auto import tqdm
 import pickle
 import os
 
-#Random player modified to have a higer probability to make an existing move
+#Random player modified to have a higher probability to make an existing move
 class RandomPlayer(Player):
     def __init__(self) -> None:
         super().__init__()
@@ -36,19 +36,19 @@ def rotate_move_to_do(posmove, n):
         case 0:#no rotation and mirroring
             pos, slide = p, s
 
-        case 1:#it has been rotated 90 degrees rotaion clockwise, we need to rotate 90 degrees counterclockwise
+        case 1:#it has been rotated 90 degrees rotation clockwise, we need to rotate 90 degrees counterclockwise
             y, x = p
             pos = (x, (4 - y))
             i = all_slides.index(s)
             slide = all_slides[(i+3) % 4]
 
-        case 2:#it has been rotated 180 degrees rotaion clockwise from original
+        case 2:#it has been rotated 180 degrees rotation clockwise from original
             x, y = p
             pos = ((4 - x), (4 - y))
             i = all_slides.index(s)
             slide = all_slides[(i+2) % 4]
 
-        case 3:#it has been rotated 270 degrees rotaion clockwise from original
+        case 3:#it has been rotated 270 degrees rotation clockwise from original
             y, x = p
             pos = ((4- x), y)
             i = all_slides.index(s)
@@ -63,7 +63,7 @@ def rotate_move_to_do(posmove, n):
             else:
                 slide = s
                 
-        case 5:#it was vertical mirrored and rotated 90 degrees rotaion clockwise
+        case 5:#it was vertical mirrored and rotated 90 degrees rotation clockwise
             y, x = p
             pos = ((4 - x), (4 - y))
             i = all_slides.index(s)
@@ -72,7 +72,7 @@ def rotate_move_to_do(posmove, n):
             else:
                 slide = all_slides[5 - i]
 
-        case 6:#it was vertical mirrored and rotated 180 degrees rotaion clockwise (it's equal a orizontal mirror)
+        case 6:#it was vertical mirrored and rotated 180 degrees rotation clockwise (it's equal a orizontal mirror)
             x, y = p
             pos = (x, (4 - y))
             i = all_slides.index(s)
@@ -81,7 +81,7 @@ def rotate_move_to_do(posmove, n):
             else:
                 slide = s
 
-        case 7:#it was vertical mirrored and rotated 270 degrees rotaion clockwise
+        case 7:#it was vertical mirrored and rotated 270 degrees rotation clockwise
             y, x = p
             pos = (x, y)
             i = all_slides.index(s)
@@ -101,19 +101,19 @@ def rotate_move_done(posmove, n): #it is called only in training to rotate the m
         case 0:#no rotation and mirroring
             pos, slide = p, s
 
-        case 1:#it will rotate 90 degrees rotaion clockwise
+        case 1:#it will rotate 90 degrees rotation clockwise
             y, x = p
             pos = ((4 - x), y)
             i = all_slides.index(s)
             slide = all_slides[(i+1) % 4]
 
-        case 2:#it will rotate 180 degrees rotaion clockwise from original
+        case 2:#it will rotate 180 degrees rotation clockwise from original
             x, y = p
             pos = ((4 - x), (4 - y))
             i = all_slides.index(s)
             slide = all_slides[(i+2) % 4]
 
-        case 3:#it will rotate 270 degrees rotaion clockwise from original
+        case 3:#it will rotate 270 degrees rotation clockwise from original
             y, x = p
             pos = (x,(4 - y))
             i = all_slides.index(s)
@@ -128,7 +128,7 @@ def rotate_move_done(posmove, n): #it is called only in training to rotate the m
             else:
                 slide = s
                 
-        case 5:#it will vertical mirror and rotate 90 degrees rotaion clockwise
+        case 5:#it will vertical mirror and rotate 90 degrees rotation clockwise
             y, x = p
             pos = ((4 - x), (4 - y))
             i = all_slides.index(s)
@@ -137,7 +137,7 @@ def rotate_move_done(posmove, n): #it is called only in training to rotate the m
             else:
                 slide = all_slides[5 - i]
 
-        case 6:#it will vertical mirror and rotate 180 degrees rotaion clockwise (it's equal a orizontal mirror)
+        case 6:#it will vertical mirror and rotate 180 degrees rotation clockwise (it's equal a orizontal mirror)
             x, y = p
             pos = (x, (4 - y))
             i = all_slides.index(s)
@@ -146,7 +146,7 @@ def rotate_move_done(posmove, n): #it is called only in training to rotate the m
             else:
                 slide = s
 
-        case 7:#it will vertical mirrored and rotate 270 degrees rotaion clockwise
+        case 7:#it will vertical mirrored and rotate 270 degrees rotation clockwise
             y, x = p
             pos = (x, y)
             i = all_slides.index(s)
@@ -169,7 +169,7 @@ class TrainedPlayer(Player):
         self.dictionary_o = {}
         self.state_dictionary_o = []
         self.alpha = ALPHA
-        self.epsilon = 1.0      #in the beginnig epsilon is set to 1 and each move it decreases exponetially
+        self.epsilon = 1.0      #in the beginning epsilon is set to 1 and each move it decreases exponentially
         self.dis_factor = DISCOUNT_FACTOR
         
         if(use_file_dict): #use file dict is used in training to update or recreate the dictionary
