@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from copy import deepcopy
 from enum import Enum
 import numpy as np
+import random
 
 # Rules on PDF
 
@@ -15,6 +16,8 @@ class Move(Enum):
     LEFT = 2
     RIGHT = 3
 
+perimeter_coordinate = [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (1, 4), (2, 4), (3, 4), (4, 4), (4, 3), (4, 2), (4, 1), (4, 0), (3, 0), (2, 0), (1, 0)]
+all_slides = [Move.TOP, Move.RIGHT, Move.BOTTOM, Move.LEFT]
 
 class Player(ABC):
     def __init__(self) -> None:
@@ -51,7 +54,6 @@ class Game(object):
         return deepcopy(self.current_player_idx)
 
     def print(self):
-        print("------------")
         for row in self._board:
             for cell in row:
                 if cell == 0:
@@ -61,6 +63,7 @@ class Game(object):
                 else:
                     print("_", end="|")
             print()
+        print("------------")
 
     def check_winner(self) -> int:
         '''Check the winner. Returns the player ID of the winner if any, otherwise returns -1'''
@@ -96,17 +99,20 @@ class Game(object):
         '''Play the game. Returns the winning player'''
         players = [player1, player2]
         winner = -1
+        count = 0
         while winner < 0:
-            self.print()
             self.current_player_idx += 1
             self.current_player_idx %= len(players)
             ok = False
+            self.print()
             while not ok:
-                from_pos, slide = players[self.current_player_idx].make_move(
-                    self)
+                from_pos, slide = players[self.current_player_idx].make_move(self)
                 ok = self.__move(from_pos, slide, self.current_player_idx)
-            print(from_pos, slide)
+            print(from_pos, slide, "player ", self.current_player_idx + 1)
             winner = self.check_winner()
+            count +=1
+            if(count > 150):
+                break
         return winner
 
     def __move(self, from_pos: tuple[int, int], slide: Move, player_id: int) -> bool:
