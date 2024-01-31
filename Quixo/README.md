@@ -1,10 +1,10 @@
 ### File: game.py
-In the class `Game` has been done two changes:
+In the class `Game` have been done two changes:
 *   one is in the function `print(self)`, beacuse I print the table in a different way (`-1`->`_|`,`0`->`X`,`1`->`O`) and in some cases I print the move done of the players
 *   I added a counter, this counter count the number of moves that are done, if the counter go over 150 the game will return a winner = -1, in this way is impossible to do infinite match 
 
 ### File: main.py
-##### Classes
+##### Classes:
 *   `RealPlayer(Player)`: It's a class that allows us to play vs the other Players.
 #### Funcitons:
 
@@ -27,9 +27,9 @@ A class of players that makes random moves.
 
 **train**: Trains the Q-learning player by playing many episodes against random players and saves the learned Q-table to a file.
 
-#### Minimax (minmax.py):
+### Minimax (minmax.py):
 
 **MinMaxPlayer**:  A class of players implementing the Minimax algorithm with alpha-beta pruning.
 *   `make_move`: Chooses the best move based on the Minimax algorithm up to a certain depth (in my case `depth` = 2, it is editable from the code, but I really think this number is a good balance between performance and efficiency).
-*   `minmax`: Implements the Minimax algorithm recursively with alpha-beta pruning.
+*   `minmax`: Implements the Minimax algorithm recursively with alpha-beta pruning. It starts with `alpha`= -100 and  `beta` = 100 and then compute recursively the algorithm unless it reaches the depth, in the `leaves` there is the value given from state_value.
 *   `state_value`: Evaluates the state based on the game state. The evaluation is 20 if `X` wins, -20 if `O` wins, 2*(max(linex)-max(lineo)) in the other cases where linex= maximum number of X in the same line(rows, columns or 2 diagonal) lineo= linex but `O` insted of `X`

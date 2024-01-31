@@ -28,9 +28,9 @@ class MinMaxPlayer(Player):
                         fake_g = deepcopy(game)
                         valid = fake_g._Game__move(pos,slide, 0)
                         if valid:
-                            _, value = self.minmax(fake_g, depth-1, (1-fake_p), alpha, beta)
-                            if(value > alpha):
-                                alpha = value
+                            _, leaf = self.minmax(fake_g, depth-1, (1-fake_p), alpha, beta)
+                            if(leaf > alpha):
+                                alpha = leaf
                                 best_move = pos, slide
                             
                             if(alpha >= beta):
@@ -42,9 +42,9 @@ class MinMaxPlayer(Player):
                         fake_g = deepcopy(game)
                         valid = fake_g._Game__move(pos,slide, 1)
                         if valid:
-                            _,value = self.minmax(fake_g, depth-1, 1-fake_p, alpha, beta)
-                            if(value < beta):
-                                beta = value
+                            _,leaf = self.minmax(fake_g, depth-1, 1-fake_p, alpha, beta)
+                            if(leaf < beta):
+                                beta = leaf
                                 best_move = pos, slide
                             
                             if(alpha >= beta):
