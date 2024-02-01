@@ -340,6 +340,7 @@ def train(num_episodes, player, use_file_dict):
         num = 0
         players[player].epsilon = 1.0
         winner = -1
+        count = 0
         while winner < 0 and num < 150:
             g.current_player_idx += 1
             g.current_player_idx %= len(players)
@@ -348,6 +349,9 @@ def train(num_episodes, player, use_file_dict):
             while not ok:
                 from_pos, slide = players[g.current_player_idx].make_move(g)
                 ok = g._Game__move(from_pos, slide, g.current_player_idx)
+                count +=1
+                if(count > 150):
+                    break
             num +=1
             action = from_pos, slide
             reward = players[player].state_value(g)

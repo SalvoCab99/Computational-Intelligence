@@ -262,15 +262,15 @@ if __name__ == '__main__':
                 select = input("Do you want to train X or O: ").upper()
                 while select != "O" and select != "X":
                     select = input("Not valid, select X or O: ").upper()
-                print("Do you want to update or recreate the dictionary? (1000 episodes)")
+                print("Do you want to update or recreate the dictionary?")
                 print("(u)update        (r)recreate (UNRACCOMANDED)")
                 p = input("").lower()
                 while p != "u" and p != "r":
                     p = input("Not valid - u or r: ").lower()
                 if(select == "X"):
-                    train(200, 0, True if p=="u" else False)
+                    train(100, 0, True if p=="u" else False)
                 if(select == "O"):
-                    train(200, 1, True if p=="u" else False)
+                    train(100, 1, True if p=="u" else False)
             case "q":
                 print("Good bye!")
                 break
